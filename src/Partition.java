@@ -38,4 +38,17 @@ public class Partition {
 		m = num;
 	}
 	
+	
+	public String sendReadKey(VectorClockD svc, String key) {
+		return readKey(svc, key);
+	}
+	
+	public String readKey(VectorClockD svc, String key) {
+		//what until svc[d] <= pvc[d]
+		while (svc.clock[d] > pvc.clock[d]);
+
+		String val = log.getSnapshot(key, svc);
+		return val;
+	}
+	
 }

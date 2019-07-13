@@ -1,5 +1,5 @@
 
-public class VectorClockD implements Cloneable{
+public class VectorClockD implements Cloneable, Comparable<VectorClockD> {
 	public Long[] clock = new Long[Commons.D];
 	
 	public VectorClockD() {
@@ -19,5 +19,11 @@ public class VectorClockD implements Cloneable{
 		for (int i = 0 ; i < Commons.D; i++)
 			vc2[i] = clock[i];
 		return new VectorClockD(vc2);
+	}
+
+	@Override
+	public int compareTo(VectorClockD o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

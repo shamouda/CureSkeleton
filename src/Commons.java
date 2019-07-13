@@ -13,4 +13,14 @@ public class Commons {
 		else
 			return b;
 	}
+	
+	//identifies the home partition of the key
+	public static int partition(String key) {
+		return -1;
+	}
+	
+	public static Partition getPartition(int d, int m) {
+		//this just simulates a specific partition
+		return new Partition(d, m);
+	}
 }
